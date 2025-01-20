@@ -24,9 +24,9 @@ export default function Home() {
         }
     }, [inView, fetchNextPage])
 
-    return status === "pending" ? ( <div>Загружаем еще котиков...</div> ) :
-            status === "error" ? ( <div>{error.message}</div> ) :
-        ( <div className="card-container">
+    return status === "pending" ? ( <h3>Загружаем еще котиков...</h3> ) :
+            status === "error" ? ( <h3>{error.message}</h3> ) :
+        ( <div className="cards-container">
             {
                 data?.pages.map((cats: Cat[]) => cats.map((cat, index) => {
                      return ( <CatCard ref={index === cats.length - 1 ? ref : null} id={cat.id} url={cat.url} /> )
