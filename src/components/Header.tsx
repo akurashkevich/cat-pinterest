@@ -13,14 +13,14 @@ export default function Header() {
             <nav>
                 <NavLink
                     to="/"
-                    style={({ isActive }) => isActive ? activeStyles : undefined}
+                    style={({ isActive }: { isActive: boolean }) => isActive ? activeStyles : undefined}
                     className="link"
                 >
                     Все котики
                 </NavLink>
                 <NavLink
                     to="/favorites"
-                    style={({ isActive }) => isActive ? activeStyles : undefined}
+                    style={({ isActive }: { isActive: boolean }) => isActive ? activeStyles : undefined}
                     className="link"
                 >
                     Любимые котики
